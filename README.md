@@ -12,7 +12,7 @@ Its process allows the steps below:
 
 ## Installation
 
-Download or Clone the repository to your local system using Bitbucket.com, SourceTree application, or .zip
+Download or Clone the repository to your local system using GitHub.com, GitHub Desktop application, Bitbucket.com, GitHub SourceTree application, or .zip
 
 ## Usage
 
