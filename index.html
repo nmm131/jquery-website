@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<title>Rock Climbing</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="css/site.css" rel="stylesheet">
+<link rel="stylesheet" href="css/sm-core-css.css">
+<link rel="stylesheet" href="css/sm-clean.css">
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.smartmenus.min.js"></script>
+<script>
+$(document).ready(function() {
+  $('.sm').smartmenus({
+    showFunction: function($ul, complete) {
+      $ul.slideDown(250, complete);
+    },
+    hideFunction: function($ul, complete) {
+     $ul.slideUp(250, complete); 
+    }
+  });
+}); // end ready
+</script>
+</head>
+<body>
+<div class="wrapper">
+  <header>
+      ROCK CLIMBING
+  </header>
+  <div class="content">
+    <div class="main">
+      <h1>Navigation Menu</h1>
+      <ul class="sm sm-clean">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#">News </a>
+          <ul>
+            <li><a href="pages/gallery.html">Gallery</a></li>
+            <li><a href="pages/form.html">Contact/Newsletter</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Professionals</a>
+          <ul>
+            <li><a href="https://en.wikipedia.org/wiki/Chris_Sharma">Chris Sharma 🔗</a>
+            </li>
+            <li><a href="https://en.wikipedia.org/wiki/Adam_Ondra">Adam Ondra 🔗</a>
+            </li>
+            <li><a href="https://en.wikipedia.org/wiki/Sasha_DiGiulian">Sasha DiGiulian 🔗</a></li>
+          </ul>
+        </li>
+      </ul>
+	  <br>
+	  <h1>Popular Magazines 🔗</h1>
+	  <a href="https://rockandice.com/"><img src="images/rock_and_ice.png" alt="rock_and_ice" align="center"></a>
+	  <br><br><br><br>
+	  <a href="http://www.alpinist.com/"><img src="images/alpinist.jpg" alt="alpinist" align="center"></a>
+      
+    </div>
+  </div>
+</head>
+<footer>
+    <p>Nate Malone, Dr. David Sciuto, JavaScript, Summer 2019</p>
+</footer>
+</div>
+</body>
+</html>

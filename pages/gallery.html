@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<title>Rock Climbing</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="../css/site.css" rel="stylesheet">
+<link rel="stylesheet" href="../css/sm-core-css.css">
+<link rel="stylesheet" href="../css/sm-clean.css">
+<script src="../js/jquery.min.js"></script>
+<script src="../js/jquery.smartmenus.min.js"></script>
+<script>
+$(document).ready(function() {
+  $('.sm').smartmenus({
+    showFunction: function($ul, complete) {
+      $ul.slideDown(250, complete);
+    },
+    hideFunction: function($ul, complete) {
+     $ul.slideUp(250, complete); 
+    }
+  });
+}); // end ready
+</script>
+</head>
+<body>
+<div class="wrapper">
+  <header>
+    JAVASCRIPT <span class="amp">&amp;</span> jQUERY: THE&nbsp;MISSING&nbsp;MANUAL
+  </header>
+  <div class="content">
+    <div class="main">
+      <h1>Navigation Menu</h1>
+      <ul class="sm sm-clean">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="#">News </a>
+          <ul>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="form.html">Contact/Newsletter</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Professionals</a>
+          <ul>
+            <li><a href="https://en.wikipedia.org/wiki/Chris_Sharma">Chris Sharma 🔗</a>
+            </li>
+            <li><a href="https://en.wikipedia.org/wiki/Adam_Ondra">Adam Ondra 🔗</a>
+            </li>
+            <li><a href="https://en.wikipedia.org/wiki/Sasha_DiGiulian">Sasha DiGiulian 🔗</a></li>
+          </ul>
+        </li>
+      </ul>
+      
+    </div>
+  </div>
+  
+  <script>
+$(document).ready(function() {
+ $('#gallery img').each(function() {
+	var imgFile = $(this).attr('src');
+	var preloadImage = new Image();
+  	var imgExt = /(\.\w{3,4}$)/;
+ 	 preloadImage.src = imgFile.replace(imgExt,'_1$1');
+		
+	$(this).hover(
+		function() {
+			$(this).attr('src', preloadImage.src);
+		},
+		function () {
+			$(this).attr('src', imgFile);
+		}
+	); // end hover
+}); // end each
+}); // end ready
+</script>
+</head>
+<body>
+<div class="wrapper2">
+<header>
+      ROCK CLIMBING
+  </header>
+<div class="content">
+	<div class="main">
+		<h1>Popular Climbing Shoes</h1>
+		<p>Mouse over the images below</p>
+		<div id="gallery">
+
+<a href="../images/vapor.jpg"><img src="../images/vapor.jpg" width="128" height="128" alt="vapor"></a> <a href="../images/miura.jpg"><img src="../images/miura.jpg" width="128" height="128" alt="miura"></a> <a href="../images/nexxo.jpg"><img src="../images/nexxo.jpg" width="128" height="128" alt="nexxo"></a> <a href="../images/arrowhead.jpg"><img src="../images/arrowhead.jpg" width="128" height="128" alt="arrowhead"></a> <a href="../images/voltage.jpg"><img src="../images/voltage.jpg" width="128" height="128" alt="voltage"></a>
+
+</div>
+</div>
+<footer>
+    <p>Nate Malone, Dr. David Sciuto, JavaScript, Summer 2019</p>
+</footer>
+</div>
+</body>
+</html>

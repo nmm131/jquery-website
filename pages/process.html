@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<title>Rock Climbing</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="../css/site.css" rel="stylesheet">
+<link rel="stylesheet" href="../css/sm-core-css.css">
+<link rel="stylesheet" href="../css/sm-clean.css">
+<script src="../js/jquery.min.js"></script>
+<script src="../js/jquery.smartmenus.min.js"></script>
+<script>
+$(document).ready(function() {
+  $('.sm').smartmenus({
+    showFunction: function($ul, complete) {
+      $ul.slideDown(250, complete);
+    },
+    hideFunction: function($ul, complete) {
+     $ul.slideUp(250, complete); 
+    }
+  });
+}); // end ready
+</script>
+</head>
+<body>
+<div class="wrapper">
+  <header>
+    JAVASCRIPT <span class="amp">&amp;</span> jQUERY: THE&nbsp;MISSING&nbsp;MANUAL
+  </header>
+  <div class="content">
+    <div class="main">
+      <h1>Navigation Menu</h1>
+      <ul class="sm sm-clean">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="#">News </a>
+          <ul>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="form.html">Contact/Newsletter</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Professionals</a>
+          <ul>
+            <li><a href="https://en.wikipedia.org/wiki/Chris_Sharma">Chris Sharma 🔗</a>
+            </li>
+            <li><a href="https://en.wikipedia.org/wiki/Adam_Ondra">Adam Ondra 🔗</a>
+            </li>
+            <li><a href="https://en.wikipedia.org/wiki/Sasha_DiGiulian">Sasha DiGiulian 🔗</a></li>
+          </ul>
+        </li>
+      </ul>
+      
+    </div>
+  </div>
+</head>
+<div class="wrapper2">
+	<header>
+      ROCK CLIMBING
+  </header>
+	<div class="content">
+		<div class="main">
+			<h1>Message Sent!</h1>
+			<p>Thank you for getting in touch!<br><br>We appreciate you contacting us about rock climbing. One of our members will be getting back to you within a few hours.<br><br>In the meantime, you can check out the following resources in the Navigation Bar:<br><br>News → Gallery<br>
+<br>Professionals → Chris Sharma / Adam Ondra / Sasha DiGiulian<br><br>Have a great day ahead!</p>
+			
+		</div>
+	</div>
+<footer>
+    <p>Nate Malone, Dr. David Sciuto, JavaScript, Summer 2019</p>
+</footer>
+</div>
+</body>
+</html>

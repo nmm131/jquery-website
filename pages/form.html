@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<title>Rock Climbing</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="../css/site.css" rel="stylesheet">
+<link rel="stylesheet" href="../css/sm-core-css.css">
+<link rel="stylesheet" href="../css/sm-clean.css">
+<script src="../js/jquery.min.js"></script>
+<script src="../js/jquery.smartmenus.min.js"></script>
+<script>
+$(document).ready(function() {
+  $('.sm').smartmenus({
+    showFunction: function($ul, complete) {
+      $ul.slideDown(250, complete);
+    },
+    hideFunction: function($ul, complete) {
+     $ul.slideUp(250, complete); 
+    }
+  });
+}); // end ready
+</script>
+</head>
+<body>
+<div class="wrapper">
+  <header>
+    JAVASCRIPT <span class="amp">&amp;</span> jQUERY: THE&nbsp;MISSING&nbsp;MANUAL
+  </header>
+  <div class="content">
+    <div class="main">
+      <h1>Navigation Menu</h1>
+      <ul class="sm sm-clean">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="#">News </a>
+          <ul>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="form.html">Contact/Newsletter</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Professionals</a>
+          <ul>
+            <li><a href="https://en.wikipedia.org/wiki/Chris_Sharma">Chris Sharma 🔗</a>
+            </li>
+            <li><a href="https://en.wikipedia.org/wiki/Adam_Ondra">Adam Ondra 🔗</a>
+            </li>
+            <li><a href="https://en.wikipedia.org/wiki/Sasha_DiGiulian">Sasha DiGiulian 🔗</a></li>
+          </ul>
+        </li>
+      </ul>
+      
+    </div>
+  </div>
+  
+  <style>
+
+#signup label.error {
+  font-size: 0.8em;
+  color: #F00;
+  font-weight: bold;
+  display: block;
+  margin-left: 215px;
+}
+#signup  input.error, #signup select.error  {
+  background: #FFA9B8;
+  border: 1px solid red;
+}
+</style>
+<script src="../js/jquery.validate.min.js"></script>
+
+<script>
+$(document).ready(function() {
+	$('#signup').validate({
+		rules: {
+			email: {
+				required: true,
+				email: true
+			},
+			password: {
+				required: true,
+				rangelength:[8,16]
+			},
+			confirm_password: {equalTo:'#password'},
+			spam: "required"
+		},
+	   
+		messages: {
+			email: {
+				required: "Please supply an e-mail address.",
+				email: "The email will not be sent. Re-enter a correct email addresss and resubmit."
+			},
+			password: {
+				required: 'Please type a password',
+				rangelength: 'Password must be between 8 and 16 characters long.'
+			},
+			confirm_password: {
+			equalTo: 'The two passwords do not match.'
+			}
+			},
+	   
+		errorPlacement: function(error, element) { 
+			if ( element.is(":radio") || element.is(":checkbox")) {
+				error.appendTo( element.parent()); 
+			} else {
+				error.insertAfter(element);
+			} 
+		} 
+
+	});
+});
+</script>
+</head>
+<body>
+<div class="wrapper2">
+	<header>
+      ROCK CLIMBING
+  </header>
+	<div class="content">
+	<div class="main">
+	<h1>Contact / Sign-up for Newsletter</h1>
+		<form action="process.html" method="post" name="signup" id="signup">
+			<div>
+				<label for="name" class="label">Name </label>
+				<input name="name" type="text" class="required" id="name" title="Please type your name.">
+			</div>
+			<div>
+				<label for="email" class="label">E-mail Address</label>
+				<input name="email" type="text" id="email">
+			</div>
+			<div><span class="label">Hobbies</span>
+				<input name="hobby" type="checkbox" id="heliskiing" value="heliskiing" class="required" title="Please check at least 1 hobby.">
+				<label for="heliskiing">Rock Climbing</label>
+				<input name="hobby" type="checkbox" id="pickle" value="pickle">
+				<label for="pickle">Ice Climbing</label>
+				<input name="hobby" type="checkbox" id="walnut" value="walnut">
+				<label for="walnut">Hiking</label>
+			</div>
+			<div>
+				<label for="dob" class="label">Date of birth</label>
+				<input name="dob" type="text" id="dob" class="date" title="Please type your date of birth using this format: 01/19/2000">
+			</div>
+			<div>
+				<label for="pro" class="label">Favorite Professional Climber</label>
+				<select name="pro" id="pro" class="required" title="Please choose a pro.">
+					<option value="">--Please select one--</option>
+					<option value="earth">Chris Sharma</option>
+					<option value="mars">Adam Ondra</option>
+					<option value="alpha centauri">Sasha DiGiulian</option>
+					<option value="forget about it">Other</option>
+				</select>
+			</div>
+			<div>
+				<label for="message" class="label">Message</label>
+				<textarea name="message" cols="15" rows="5" id="message"></textarea>
+			</div>
+			<div class="labelBlock">Sign-up for our Newsletter? </div>
+			<div class="indent">
+				<input  type="radio" name="spam" id="yes" value="yes" class="required" title="Please select an option">
+				<label for="yes">Yes</label>
+				<input type="radio" name="spam" id="definitely" value="definitely">
+				<label for="definitely">No</label>
+				<input type="radio" name="spam" id="choice" value="choice">
+				<label for="choice">Limited</label>
+			</div>
+			<div>
+				<input type="submit" name="submit" id="submit" value="Submit">
+			</div>
+		</form>
+		</div>
+	</div>
+  <footer>
+    <p>JavaScript &amp; jQuery: The Missing Manual, 3rd Edition, by <a href="http://sawmac.com/">David McFarland</a>. Published by <a href="http://oreilly.com/">O'Reilly Media, Inc</a>.</p>
+  </footer>
+</div>
+</body>
+</html>
+
+
+<footer>
+    <p>Nate Malone, Dr. David Sciuto, JavaScript, Summer 2019</p>
+</footer>
+</div>
+</body>
+</html>
